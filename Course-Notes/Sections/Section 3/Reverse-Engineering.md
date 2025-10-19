@@ -6,5 +6,7 @@ In order to decompile  Android applications we have 2 approaches:
 
 To reverse  engineer an application we would stick to `unziping` and  use a tool `Dex2Jar` to retrieve the java source code:
 
-<img width="1823" height="995" alt="image" src="https://github.com/user-attachments/assets/0748587c-af2c-4fb6-88d3-f8e22ba71b49" />
+<img width="1823" height="995" alt="image" src="https://github.com/user-attachments/assets/0748587c-af2c-4fb6-88d3-f8e22ba71b49" /></b>
 
+> [!Note]
+> <a href="https://github.com/DexPatcher/dex2jar">`dex2jar`</a> tool from the original repo does not work for android version 8, so we would use a fork of the original repo to support Android v8 and it also works for the latest version of Android. 
