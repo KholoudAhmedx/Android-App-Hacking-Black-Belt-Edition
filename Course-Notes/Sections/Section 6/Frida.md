@@ -1,9 +1,9 @@
 # FRIDA 
 ## Introduction
 ### Components (Simplified)
-- Smart phone -> runs JVM.
-- JVM -> Manages Java Code.
-- Client (Laptop) </b>
+- Smart phone -> runs JVM & runs FRIDA server.
+- JVM -> Manages Java code.
+- Client (Laptop) -> runs FRIDA client that communicates with the server. </b>
 
 **FRIDA** Hooks into the JVM and perfom run time manipulation, where it modifies code in memory/at run time.
 **FRIDA** consists of two components:
