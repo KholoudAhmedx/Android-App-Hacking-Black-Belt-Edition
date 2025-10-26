@@ -13,5 +13,10 @@
 And the way these two components communicate with each other is by using JS/Python. 
 >[!Note]
 > The backend of **FRIDA** is written in JS, so it is better to communicate via JS instead of Python. </br>
-
-
+## Installation
+In order to install FRIDA, you need to install two components:
+- Frida Server:
+  -  Install the binary file that matches your platform from the official <a href="https://github.com/frida/frida/releases">FRIDA</a> Git repo.
+  -  Push the binary to `/data/local/tmp` in your smartphone to be able to execute that binary. </br>
+- FRIDA Client:
+  - Install it via `pip3 install frida-tools`. </br>
