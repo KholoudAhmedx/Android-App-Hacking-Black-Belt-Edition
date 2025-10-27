@@ -29,3 +29,11 @@ In order to install FRIDA, you need to install two components:
 We have 2 ways to run FRIDA scripts: </br>
 1. Provide the script as a parameter to the frida client.
 2. Provde the script directly inside the frida terminal. </br>
+
+>[!Note]
+>`Java.peform()` -> we use this method to override the Java function stored on the JVM on the smartphone you are testing the application on. In order for FRIDA to define which platform it operates on (since it can operates on Win, Linux, and MAC), we call this function that attaches to the JVM running on the smartphone and get access to all classes, methods, etc required for hooking. </br>
+> So it tells FRIDA, please hook into the JVM that has access to those classes & methods. </br>
+><img width="1010" height="360" alt="image" src="https://github.com/user-attachments/assets/e57fe240-6e0a-4be9-9e4e-b72dce87ee0b" />
+</br>
+
+
