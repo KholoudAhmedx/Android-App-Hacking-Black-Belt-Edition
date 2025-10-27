@@ -24,7 +24,7 @@ In order to install FRIDA, you need to install two components:
 **How to hook into a JVM?**
 1. Install the APK file on the application.
 2. Get the package identifier of the app that we want to hook into via `frida-ps -U | grep -i <pacakge_name>`.
-3. Hook into the package via `frida-ps -U <package_name>`. </br>
+3. Hook into the package via `frida -U <package_name>`. </br>
 
 We have 2 ways to run FRIDA scripts: </br>
 1. Provide the script as a parameter to the frida client.
