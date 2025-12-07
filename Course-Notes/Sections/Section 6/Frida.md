@@ -36,4 +36,5 @@ We have 2 ways to run FRIDA scripts: </br>
 ><img width="1010" height="360" alt="image" src="https://github.com/user-attachments/assets/e57fe240-6e0a-4be9-9e4e-b72dce87ee0b" />
 </br>
 
+## Function Overloading 
 
