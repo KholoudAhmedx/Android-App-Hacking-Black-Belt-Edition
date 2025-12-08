@@ -50,5 +50,5 @@ What if there are set of check in between that detects certian conditions (e.g, 
 <img width="1634" height="890" alt="image" src="https://github.com/user-attachments/assets/08af98e8-11e0-4d70-9cc9-a5617c6fdfdd" />
  Hooking into the running process after it is marked as **rooted** won't help us much. Therefore, there's another possibilility that you can take controll of the app start/boot/ </br>
  <img width="1634" height="890" alt="image" src="https://github.com/user-attachments/assets/233dbdf1-2c95-41a9-b666-624ff511762e" />
-So frida launches the application and provide the script as soon as possible. </br>
+So frida launches the application and provide the script as soon as possible via `frida -U -f <App_bundle>`.
 
