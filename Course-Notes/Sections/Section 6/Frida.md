@@ -39,5 +39,16 @@ We have 2 ways to run FRIDA scripts: </br>
 ## Function Overloadig
 
 **Function Overloading** is simply writing the same function with different signature. Two functions can have the same name but with different number of arguments or different data types. </br>
+## Timing (Hooking)
 
+Normal hooking scenario with FRIDA is as the following:
+1. App starts
+2. App is up and running so its status is marked as **running**.
+3. After it is marked as running, we connect to the process, then patch the method and interfere with the app. </br>
+
+What if there are set of check in between that detects certian conditions (e.g, whether you are running as root) and terminates the app immediately? In this case, you won't be able to hook into the app and patch the functions because the app's status won't be running anymore. </br>
+<img width="1634" height="890" alt="image" src="https://github.com/user-attachments/assets/08af98e8-11e0-4d70-9cc9-a5617c6fdfdd" />
+ Hooking into the running process after it is marked as **rooted** won't help us much. Therefore, there's another possibilility that you can take controll of the app start/boot/ </br>
+ <img width="1634" height="890" alt="image" src="https://github.com/user-attachments/assets/233dbdf1-2c95-41a9-b666-624ff511762e" />
+So frida launches the application and provide the script as soon as possible. </br>
 
