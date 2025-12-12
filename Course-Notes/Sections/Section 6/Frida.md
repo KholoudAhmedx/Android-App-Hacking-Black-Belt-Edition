@@ -52,3 +52,17 @@ What if there are set of check in between that detects certian conditions (e.g, 
  <img width="1634" height="890" alt="image" src="https://github.com/user-attachments/assets/233dbdf1-2c95-41a9-b666-624ff511762e" />
 So frida launches the application and provide the script as soon as possible via `frida -U -f <App_bundle>`.
 
+## Actively Calling a Method
+We've seen how to override existing method but we have to wait until this method is triggered. Now we need to know how to actively call a method and take over control. </br>
+There are 2 types of classes to call: </br>
+1. Static methods -> does not require to inistantiate an object to call it, you call it with the name of the class `Alien.increaseLives()`.
+2. Class methods -> you need to inistantiate an object of the class and then call this method `Player player = new Player(); player.increaseLever()`.
+</br>
+To actively call a static method, you get a reference to this class and class the method directly. </br>
+
+```
+Java.perform(function(){
+  mainAct= Java.use('com.apphacking.fridaFunc.MainActivity');
+  mainAct.nextLevel();
+})
+```
