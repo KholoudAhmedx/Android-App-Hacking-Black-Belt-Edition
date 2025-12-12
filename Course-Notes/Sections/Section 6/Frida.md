@@ -66,3 +66,16 @@ Java.perform(function(){
   mainAct.nextLevel();
 })
 ```
+To actively call a class method, you need to first create an instance of the class and then call the method. </br>
+
+```
+Java.Perform(function(){
+
+  var playerClassRef = Java.use('com.apphacking.fridaFunc.Player');
+  var playerInstance = playerClassRef.$new();
+  playerInstance.increaseLevel();
+});
+```
+The `$new` keyword creates a new object/instance of the class in memory everytime it gets called. </br>
+
+## Working with Instances & Existing Objects
