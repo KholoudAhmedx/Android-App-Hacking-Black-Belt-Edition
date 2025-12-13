@@ -79,3 +79,7 @@ Java.Perform(function(){
 The `$new` keyword creates a new object/instance of the class in memory everytime it gets called. </br>
 
 ## Working with Instances & Existing Objects
+In order to update an existing object, we need to scan the memory, look for that existing object and update its values/attributes. </br>
+`Java.choose(className, callback)` -> where it enumaters live instances of the `ClassName` class by scanning the Java heap. </br>
+To update an attribute of the instance in the memory, you simply do it this way `instance.lives.value = 10` where lives is the attribute of the instance you are looking for, and value is it's value. </br>
+
