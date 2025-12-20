@@ -84,3 +84,15 @@ In order to update an existing object, we need to scan the memory, look for that
 To update an attribute of the instance in the memory, you simply do it this way `instance.lives.value = 10` where lives is the attribute of the instance you are looking for, and value is it's value. </br>
 
 FRIDA may crash if it is incompatible with our device; To make sure if it is a compatibility issue, run the application on a VM and then run the FRIDA script on it. </br>
+
+## Instance as Paramaeter
+In order to pass complex parameters such as objects in Frida, we can get reference to these objects and pass them as a parameter. </br>
+
+```
+/** Assuming we have 2 objects Boss and Item and Boss takes Item as a parameter **/
+const BossRef = Java.use(<classRef>)
+const ItemRef = Java.use(<classRef>)
+const ItemInstanceRef = ItemRef.$new(1000);
+const BossInstanceRef = BossRef.$new(ItemInstanceRef);
+
+```
