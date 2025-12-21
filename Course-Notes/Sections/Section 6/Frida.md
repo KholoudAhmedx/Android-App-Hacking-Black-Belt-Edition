@@ -96,3 +96,18 @@ const ItemInstanceRef = ItemRef.$new(1000);
 const BossInstanceRef = BossRef.$new(ItemInstanceRef);
 
 ```
+## Constructor Hooking
+The difference between this approach and the previous ones is we are manipulating the creation of the object. Before, we were creating new objects/instances and therefore, the constructor was being called. Now we are not creating new objects, we are hooking the constructor itself without creating any new objects. </br>
+
+```
+Java.perform(function(){
+  var classRef = Java.use(<classref>)
+  // To call the constructor
+  classRef.$init.implementation = function(){
+  // new implementation
+  }
+});
+
+```
+Notice that it's always a good idea to hook constructors at the beginning of the app. Because if it's called later, it gets created elsewhere and overriding it, is no longer affects.</br>
+
