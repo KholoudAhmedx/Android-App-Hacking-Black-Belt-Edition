@@ -110,4 +110,9 @@ Java.perform(function(){
 
 ```
 Notice that it's always a good idea to hook constructors at the beginning of the app. Because if it's called later, it gets created elsewhere and overriding it, is no longer affects.</br>
+## Hooking the Native Development Kit
+Hooking native code with Frida makes us leave `Java.use` and adapt a new approach `Interceptor.attach(target, callback)`. </br>
+We are no longer attaching to JVM (Dalvik),
+**Target** -> is the pointer to the native function (function we want to hook). </br>
+**Callback** -> has `onEnter()` which let us have an easy access to parameters and perform the code upon entering the method and `onLeave()` which let us have an easy access to return values (just before leaving the function). </br>
 
