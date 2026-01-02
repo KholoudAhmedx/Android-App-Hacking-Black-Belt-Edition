@@ -157,6 +157,13 @@ If you are using `Interceptor.attach()`, then start up the application first unt
 
 <img width="1132" height="609" alt="image" src="https://github.com/user-attachments/assets/27148282-a2b7-4492-ae7a-5416c9d0456d" />
 
+### Manipulating NDK Methods
+In order to manipulate NDK methods in the `interceptor.attach()` approach, we cannot just simply send the modified value. Instead we should get the pointer of the argument and then override it. </br>
+`arg[3]=ptr(2)`. </br>
+This works for Integers but not strings. The strings should be UTF. </br>
+`arg[2] = Java.vm.getEnv().newStringUtf(<new_string>)`. </br>
+>[!Note]
+> The previous string modification works fine with args, but with `ret` value in `onLeave()` we should replace it in another way; `ret.replace(<string>)`. </br>
 
 
 
