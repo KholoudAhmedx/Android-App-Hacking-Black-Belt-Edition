@@ -116,3 +116,30 @@ We are no longer attaching to JVM (Dalvik),
 **Target** -> is the pointer to the native function (function we want to hook). </br>
 **Callback** -> has `onEnter()` which let us have an easy access to parameters and perform the code upon entering the method and `onLeave()` which let us have an easy access to return values (just before leaving the function). </br>
 
+In order to bridge between native code and java code is by doing the following: </br>
+1. First we load the native library into the Java code.
+2. Add the definition of the new function with the prefix `native`.
+3. Call the method </br>
+<img width="1875" height="924" alt="image" src="https://github.com/user-attachments/assets/0ff79558-c6c0-4216-8950-04e8ef08ab60" />
+
+**How does the function look like in the C/C++ code?** </br>
+<img width="848" height="281" alt="image" src="https://github.com/user-attachments/assets/bb0bb964-9471-4057-8e1a-4f76e1134aa1" />
+This allows us to have multiple functions with the same name without colliding. </br> 
+`JNEnv* env` -> pointer to all NDK functions. </br>
+`jobject` -> pointer to the current object. </br>
+
+In order to hook a native function: </br>
+1. There's an easy way.
+2. There's a hard way. </br>
+
+### Hooking NDK : The Easy Way
+We hook simply the Java function..`decryptString()`. </br>
+If you are dealing with native function that has a prototype in the Java code -->> go the easy way. </br>
+
+Same method of hooking functions as before (`Java.perform(function(){// get class reference //get method and change the imp. })`. 
+### Hooking NDK : The Hard Way 
+We use `Interceptor.attach(nativeFunctionPointer, callbacks)`. The native function is being defined in the native library, we need to get this function at rest (nativeFunctionPointer), then we have to provide our callbacks, after that we can observe the paramateres and return values. </br>
+**Why bother learning the hardway?**
+-> Because not all functions we want to hook are defined in the Java world (`strcpy()`, `strcmpr()`, ..). </br>
+
+
