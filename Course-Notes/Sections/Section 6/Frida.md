@@ -152,4 +152,10 @@ We use `Interceptor.attach(nativeFunctionPointer, callbacks)`. The native functi
     3. `Module.enumerateSymbols()` --> these are the functions/variables that are defined in the programs.</br>
 <img width="1846" height="921" alt="image" src="https://github.com/user-attachments/assets/bdb3d66e-fd6e-4b4d-b3af-82b0818a40c0" />
 
+## FRIDA Timing
+If you are using `Interceptor.attach()`, then start up the application first until it is running and hook on a running process because otherwise it would fail. Attach with frida and then apply the script. Don't give the script as an argument to the frida cmd because overriding the scripting would cause the app to crash. </br>
+<img width="1032" height="532" alt="image" src="https://github.com/user-attachments/assets/62630152-4239-4c41-92d4-c8c783578860" />
+
+
+
 
