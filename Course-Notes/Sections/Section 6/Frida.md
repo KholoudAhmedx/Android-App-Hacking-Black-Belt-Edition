@@ -142,4 +142,14 @@ We use `Interceptor.attach(nativeFunctionPointer, callbacks)`. The native functi
 **Why bother learning the hardway?**
 -> Because not all functions we want to hook are defined in the Java world (`strcpy()`, `strcmpr()`, ..). </br>
 
+**Steps to hook NDK the hardway**:
+1. We won't reverse engineer the app -> would cause us to miss function pointers and other important stuff.
+2. Use Frida to enumerate all functions and their pointers.
+3. Use `Interceptor.attach(<function_pointer>, callbacks)`.
+4. In order to get the functions and their addresses we would use the following functions
+    1. `Module.enumerateImports()` --> these are the functions that are imported in the lib.
+    2. `Module.enumerateExports()` --> these are the functions/variables that are defined by the lib & meant to be available to the outside. 
+    3. `Module.enumerateSymbols()` --> these are the functions/variables that are defined in the programs.</br>
+<img width="1846" height="921" alt="image" src="https://github.com/user-attachments/assets/bdb3d66e-fd6e-4b4d-b3af-82b0818a40c0" />
+
 
