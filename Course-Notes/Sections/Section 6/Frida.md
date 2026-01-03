@@ -165,5 +165,7 @@ This works for Integers but not strings. The strings should be UTF. </br>
 >[!Note]
 > The previous string modification works fine with args, but with `ret` value in `onLeave()` we should replace it in another way; `ret.replace(<string>)`. </br>
 
+### Hooking C Functions
+
 
 
