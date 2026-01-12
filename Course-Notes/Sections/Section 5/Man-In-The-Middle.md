@@ -6,6 +6,26 @@ There are different setups to perform MITM attacks regarding Android devices but
 What is the problem then?
 - You will miss a lot of connections; If the app uses SSH, SQL, MQTT or SIP, you don't see this traffic. </br>
 
+**Preferred Setup in this course**: </br>
+- Setup includes DNS, HTTP, and intercept every connection the device is establishing including MQTT, SSH, etc. </br>
+
+MIMT happens when you sniff/intercept the connection between a network device (mobile) and the router.
 
 ## ARP - Address Resolution Protocol 
+When sending a message between two clients on the network, the sending device need to know the ip and the MAC address of the receiving device. In order to get the MAC address of the receiving device, we need to git advantage of ARP protocol: </br>
+client A | --------------------------->           | Client B </br>
+ </t></t>| send ARP Request                       | ME! </br>
+ </t></t> | (Who has this specific Ip?)            | </br>
+         | <------------------------              | </br>
+         |  ARP Reply (the ip with MAC address)   | </br>
+         |  (now we can send messages between)    | </br>
+         |        clients                         | </br>
+  </br>
+The sending client creates **ARP Cache** that is a resolution of each IP and its corresponding MAC address to avoid asking for the MAC address each time. </br>
+
+**How cache gets updated?** </br>
+If the receiving client is no longer connects to the network (your pc breaks or something) and a new device connected to the network and the router assigned the same ip of the old client to the new client with a new MAC address. </br>
+The sending device keeps trying to connect to the the new receiving device but it keeps failing (the mapping is now invalid), until the sending device goes through the same cycle to get the MAC address of the new client and then update the ARP Cache with the new values. 
+
+How to establish this attack? 
 
