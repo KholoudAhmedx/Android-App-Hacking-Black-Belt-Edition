@@ -28,4 +28,11 @@ If the receiving client is no longer connects to the network (your pc breaks or 
 The sending device keeps trying to connect to the the new receiving device but it keeps failing (the mapping is now invalid), until the sending device goes through the same cycle to get the MAC address of the new client and then update the ARP Cache with the new values. 
 
 How to establish this attack? 
+The vulnerability happens when the attacker sends an ARP Reply to the mobile device to trick it into updating its ARP cache with the malicious addresses. </br> And since this protocol requires no authentication/ authorization to update the cache table, and no prior ARP request is necessary to send the reply, the attacker is able to exploit this protocol. </br>
+<img width="1391" height="646" alt="image" src="https://github.com/user-attachments/assets/41380c55-6879-4086-b68a-11f85d664dee" />
+<img width="1391" height="646" alt="image" src="https://github.com/user-attachments/assets/ddb7fc89-c7b9-45e5-a5d7-67f1d487c342" />
+<img width="1920" height="1052" alt="image" src="https://github.com/user-attachments/assets/bee6005d-df37-41f5-9932-657a896883ad" />
+
+**Weaknesses** </br>
+- We need to permenantly flood the device with ARP replies to force it to update the cache which causes a headache on the device and causes us to miss pacakages. </br>
 
