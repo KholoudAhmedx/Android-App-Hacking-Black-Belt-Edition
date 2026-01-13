@@ -36,3 +36,12 @@ The vulnerability happens when the attacker sends an ARP Reply to the mobile dev
 **Weaknesses** </br>
 - We need to permenantly flood the device with ARP replies to force it to update the cache which causes a headache on the device and causes us to miss pacakages. </br>
 
+## MITM Setup
+The whole idea relies on the fact that if we own the device, we don't need to hack it. So instead of acting as a man in the middle, if we have the device we can control it directly and sniff the traffic via it. </br>
+The setup requires the following:
+1. A smart device
+2. A router (the device we control)
+3. The attacker machine (ubuntu, not necessarily)</br>
+
+The setup itself is practical, you can refer to the <a href="https://www.udemy.com/course/android-app-hacking-black-belt-edition/learn/lecture/32283770#overview">lab </a></br>
+
