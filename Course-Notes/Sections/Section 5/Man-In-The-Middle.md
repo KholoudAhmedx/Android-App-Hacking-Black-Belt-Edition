@@ -41,7 +41,7 @@ The whole idea relies on the fact that if we own the device, we don't need to ha
 The setup requires the following:
 1. A smart device
 2. A router (the device we control)
-3. The attacker machine (ubuntu, not necessarily)</br>
+3. The attacker machine (ubuntu, not necessarily) to provide internet access</br>
 
 The setup itself is practical, you can refer to the <a href="https://www.udemy.com/course/android-app-hacking-black-belt-edition/learn/lecture/32283770#overview">lab </a></br>
 
