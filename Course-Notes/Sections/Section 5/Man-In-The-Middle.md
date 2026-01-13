@@ -43,5 +43,7 @@ The setup requires the following:
 2. A router (the device we control)
 3. The attacker machine (ubuntu, not necessarily) to provide internet access</br>
 
-The setup itself is practical, you can refer to the <a href="https://www.udemy.com/course/android-app-hacking-black-belt-edition/learn/lecture/32283770#overview">lab </a></br>
+The setup itself is practical, you can refer to the <a href="https://www.udemy.com/course/android-app-hacking-black-belt-edition/learn/lecture/32283770#overview">video</a></br>
+<img width="1127" height="567" alt="image" src="https://github.com/user-attachments/assets/e2568a12-2728-4ea5-b592-8b3b058aed9f" />
+
 
