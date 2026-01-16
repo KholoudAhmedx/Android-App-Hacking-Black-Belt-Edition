@@ -56,5 +56,7 @@ You can do this in two steps: </br>
 >[!Note]
 >In order for Burp proxy to forward the traffic to the destination port, we need to use the mode **invisible** that acts as its port is not there, and therefore forward the traffic to the real destination. </br>
 
+## HTTPs Traffic
+HTTPs is more secure than HTTP because it builds a trust relationship between the device and the server that established a cryptographic channel between the devices to send the traffic. </br>
 
 
