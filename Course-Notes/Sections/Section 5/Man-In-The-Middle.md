@@ -46,4 +46,15 @@ The setup requires the following:
 The setup itself is practical, you can refer to the <a href="https://www.udemy.com/course/android-app-hacking-black-belt-edition/learn/lecture/32283770#overview">video</a></br>
 <img width="1127" height="567" alt="image" src="https://github.com/user-attachments/assets/e2568a12-2728-4ea5-b592-8b3b058aed9f" />
 
+## Intercepting Theory 
+In order to intercpet http traffic and interact with it before forwarding it to the server, we need to forward the traffic via a local proxy. </br>
+<img width="1914" height="1074" alt="image" src="https://github.com/user-attachments/assets/b16f3630-562a-4988-800e-047d5ed9dfce" />
+You can do this in two steps: </br>
+1. Enable ip forwarding for our kernel via this command `echo 1 > /proc/sys/net/ipv4/ip_forward` to enable ipv4 forwarding that turns your machine into a router to forward packets between interfaces.
+2. Forward ipv4 packets via ip tables to the local proxy via this command `iptables -t nat -A PREROUTING -p tcp --dport 8080 -j DNAT -to-destination 10.42.0.1:8080`. </br>
+<img width="1914" height="1074" alt="image" src="https://github.com/user-attachments/assets/7fd4da6c-9add-477f-84a9-ef31e276ed76" />
+>[!Note]
+>In order for Burp proxy to forward the traffic to the destination port, we need to use the mode **invisible** that acts as its port is not there, and therefore forward the traffic to the real destination. </br>
+
+
 
