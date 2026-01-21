@@ -59,4 +59,12 @@ You can do this in two steps: </br>
 ## HTTPs Traffic
 HTTPs is more secure than HTTP because it builds a trust relationship between the device and the server that established a cryptographic channel between the devices to send the traffic. </br>
 
+## SSL Pinning
+SSL pinning does not weaken your application security but it is recommended to do it. </br>
+SSL Pinning can be implemented in the following ways: </br>
+1. Embed certificate within apk
+2. Hardcode fingerprint of the correct certificate into the application. </br>
+
+It can be easily bypassed by reversing the app and replace those values. </br>
+
 
