@@ -67,4 +67,13 @@ SSL Pinning can be implemented in the following ways: </br>
 
 It can be easily bypassed by reversing the app and replace those values. </br>
 
+**network security config** is a good approach to perform certificate pinning. </br>
+We define: </br>
+1. Type of pinning to perform
+2. The whole certificate itself
+3. Fingerprints of the public key
+4. Certain domains </br>
+
+### Certificate Chaining: Why Do We Have More Than One Certificate On A Signle Domain
+<img width="1117" height="397" alt="image" src="https://github.com/user-attachments/assets/ffb95dc5-d1d5-4f81-a38f-2bbc960a78d5" />
 
