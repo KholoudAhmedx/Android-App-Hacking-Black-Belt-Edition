@@ -77,3 +77,5 @@ We define: </br>
 ### Certificate Chaining: Why Do We Have More Than One Certificate On A Signle Domain
 <img width="1117" height="397" alt="image" src="https://github.com/user-attachments/assets/ffb95dc5-d1d5-4f81-a38f-2bbc960a78d5" />
 
+**PEM** -> ASCII rep in base64 format. </br>
+**DER** -> Binary rep of certificate. </br>
