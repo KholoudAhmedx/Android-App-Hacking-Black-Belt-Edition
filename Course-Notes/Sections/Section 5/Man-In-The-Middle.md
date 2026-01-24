@@ -13,9 +13,10 @@ MIMT happens when you sniff/intercept the connection between a network device (m
 
 ## ARP - Address Resolution Protocol 
 When sending a message between two clients on the network, the sending device need to know the ip and the MAC address of the receiving device. In order to get the MAC address of the receiving device, we need to git advantage of ARP protocol: </br>
-client A | --------------------------->           | Client B </br>
- </t></t>| send ARP Request                       | ME! </br>
- </t></t> | (Who has this specific Ip?)            | </br>
+client A | --------------------------->           | Client B |</br>
+ 
+ </t></t>| send ARP Request                       | ME! |</br>
+ </t></t> | (Who has this specific Ip?)           | |</br>
          | <------------------------              | </br>
          |  ARP Reply (the ip with MAC address)   | </br>
          |  (now we can send messages between)    | </br>
@@ -79,3 +80,22 @@ We define: </br>
 
 **PEM** -> ASCII rep in base64 format. </br>
 **DER** -> Binary rep of certificate. </br>
+
+**There are two ways to check if the certificate presented to the client is the one expected: </br>
+1. Take the whole certificate and put it into a hash function to generate the fingerprint of the certificate.
+2. Take only the public key in the certificate and put it into a hash function and generate the fingerprint of the public key.
+3. Check the whole certificate in the client and compare it to the one presented on the server. </br>
+
+**How hashes of the fingerprints are being generated?**
+1. Go to the certificate directory
+2. `openssl x509 -fingerprint -in <certificate_file> -inform pem` </br>
+
+If the fingerprints are embedded in the network security config, we can change the config to trust user certificates + system certificates, but generating the fingerprints ourselves would help when other certificates are being pinned in the java code. </br>
+We would then need to calculate the fingerprints ourselves. </br>
+
+**To patch the public key of a cert** </br>
+1. `openssl x509 -in burp.crt -inform der -pubkey --noout > pub.key` -> to extract a public key from the certificate.
+2. `openssl rsa -in <publickeyfile> -pubin -outform der` -> make a fingerprint of the returned public key
+3. `openssl dgst -sha256 -binary` -> to calculate the hash over the public key
+4. calculate base64 of the value. </br>
+
