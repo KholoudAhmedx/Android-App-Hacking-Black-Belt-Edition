@@ -103,3 +103,6 @@ We would then need to calculate the fingerprints ourselves. </br>
 1. Embed the hash of the public key
 2. Embed the whole certificate (easier to patch)
 3. Put the certificate in a keystore with a password and embed the keystore in the app </br>
+
+### Certificate Pinning Patching: Objection
+Objection is a framework that has been build on FRIDA and has prepared scripts to solve our basic tasks. </br>
