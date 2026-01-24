@@ -99,3 +99,7 @@ We would then need to calculate the fingerprints ourselves. </br>
 3. `openssl dgst -sha256 -binary` -> to calculate the hash over the public key
 4. calculate base64 of the value. </br>
 
+**The developer can embed the certificate in code in 3 ways:** </br>
+1. Embed the hash of the public key
+2. Embed the whole certificate (easier to patch)
+3. Put the certificate in a keystore with a password and embed the keystore in the app </br>
