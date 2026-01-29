@@ -15,5 +15,9 @@ In order to apply some modification to the app on smali level, you need to follo
 ## Registers
 <img width="1233" height="637" alt="image" src="https://github.com/user-attachments/assets/a8ba1168-67fa-4fd8-b5f1-50b8dff58c30" />
 `local registers` can be recycled in code execution --> they can be assigned different values for performance purposes. </br>
+`p0` --> special parameter register that holds `this` object. </br>
 ## Types
 <img width="1772" height="782" alt="image" src="https://github.com/user-attachments/assets/49ec1f6b-1575-4bd4-9418-beee84fc0051" />
+## P0
+`iget v0, p0, Lcom/apphacking/smaliOne/Player->power;` </br>
+We are buffering (this.power) object into a local register because we cannot act on `return this.power`, so we need to put it first in a buffer and then return it. </br>
