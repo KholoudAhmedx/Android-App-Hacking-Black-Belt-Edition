@@ -38,3 +38,7 @@ DalivOpCodes -> are the instruction set of dalivk. </br>
 It's important to understand dalivk instructions as it helps in patching smali code. </br>
 The better approach to follow when patching smali is to figure out which registers hold which values because this is what really matters. </br>
 (Don't just convert smali into java code because you can simply patch the code in java directly.)</br>
+
+## Smali File Structure
+<img width="1920" height="1075" alt="image" src="https://github.com/user-attachments/assets/338e3be1-b5b6-4d4f-a537-3c4542e041e6" />
+
