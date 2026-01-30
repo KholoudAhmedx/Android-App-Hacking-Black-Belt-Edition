@@ -1,4 +1,5 @@
 # Smali
+**Smali** -> is the representation of the android bytecode (`.dex`: Dalvik exec format). </br>
 `apk-tool` and `jadx-gui` have different decompilers, therefore, different byte code. </br> The smali syntax result of them are different.
 | apk-tool smali| jadx-gui smali|
 |---------------|---------------|
@@ -14,10 +15,26 @@ In order to apply some modification to the app on smali level, you need to follo
 
 ## Registers
 <img width="1233" height="637" alt="image" src="https://github.com/user-attachments/assets/a8ba1168-67fa-4fd8-b5f1-50b8dff58c30" />
+
 `local registers` can be recycled in code execution --> they can be assigned different values for performance purposes. </br>
 `p0` --> special parameter register that holds `this` object. </br>
 ## Types
+Inner classes are dentoe with `$` so the type be `Lcom/apphacking/smaliOne/Player$tenisPlayer`. </br>
 <img width="1772" height="782" alt="image" src="https://github.com/user-attachments/assets/49ec1f6b-1575-4bd4-9418-beee84fc0051" />
 ## P0
+
 `iget v0, p0, Lcom/apphacking/smaliOne/Player->power;` </br>
 We are buffering (this.power) object into a local register because we cannot act on `return this.power`, so we need to put it first in a buffer and then return it. </br>
+
+## DalivkOpCodes
+DalivOpCodes -> are the instruction set of dalivk. </br>
+
+|                 | Smali               | Assembly       |
+| --------------- | ------------------- | -------------- |
+| Runs on         | Dalvik / ART (VM)   | CPU (ARM, x86) |
+| Level           | **Virtual machine** | **Hardware**   |
+| Instruction set | DEX instructions    | CPU opcodes    |
+
+It's important to understand dalivk instructions as it helps in patching smali code. </br>
+The better approach to follow when patching smali is to figure out which registers hold which values because this is what really matters. </br>
+(Don't just convert smali into java code because you can simply patch the code in java directly.)</br>
