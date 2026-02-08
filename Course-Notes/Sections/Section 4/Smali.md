@@ -41,4 +41,5 @@ The better approach to follow when patching smali is to figure out which registe
 
 ## Smali File Structure
 <img width="1920" height="1075" alt="image" src="https://github.com/user-attachments/assets/338e3be1-b5b6-4d4f-a537-3c4542e041e6" />
+## IF?ELSE
 
