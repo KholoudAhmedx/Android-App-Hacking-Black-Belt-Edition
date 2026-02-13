@@ -45,6 +45,8 @@ The better approach to follow when patching smali is to figure out which registe
 ## IF?ELSE
 ### Patching IF/ELSE/Goto
 To patch code in smali: 
-1. Method 1: Logic flipping
-ﻹخ 
+1. Logic flipping
+2. Deleting code
+3. Jumps (`goto`)
+**Switch statements** -> is translated into smali code as multiple if conditions. </br>
 
