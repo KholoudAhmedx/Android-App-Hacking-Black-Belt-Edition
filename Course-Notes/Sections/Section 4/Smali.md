@@ -50,3 +50,6 @@ To patch code in smali:
 3. Jumps (`goto`)
 **Switch statements** -> is translated into smali code as multiple if conditions. </br>
 
+>[!Note]
+>Rooting detection is not a security mechanism to block attackers, it is a security mechanism regarding the client/user to prevent them from accidently running the application on a rooted device.
+>Since it is a client mechanism an attacker can bypass it:( </br>
