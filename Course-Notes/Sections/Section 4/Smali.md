@@ -57,3 +57,6 @@ To patch code in smali:
 ## Objects & Methods
 `invoke-direct` -> to invoke constructors. </br>
 `invoke-virtual` -> to invoke public methods. </br>
+
+**How to print out strings?** </br>
+<img width="605" height="209" alt="image" src="https://github.com/user-attachments/assets/cb06399f-5892-491c-b5a4-ec3e31ccb280" />
