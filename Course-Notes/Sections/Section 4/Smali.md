@@ -60,3 +60,6 @@ To patch code in smali:
 
 **How to print out strings?** </br>
 <img width="605" height="209" alt="image" src="https://github.com/user-attachments/assets/cb06399f-5892-491c-b5a4-ec3e31ccb280" />
+
+>[!Note]
+>When patching a large snippet of code, you can write it in java first, build the APK, then reverse engineer it and take that samli part insert it into you app. (This is an easy method to patch large code in smali without making too much mistakes) </br>
