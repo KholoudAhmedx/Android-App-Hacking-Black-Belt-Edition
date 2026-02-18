@@ -167,5 +167,7 @@ This works for Integers but not strings. The strings should be UTF. </br>
 
 ### Hooking C Functions
 
+## Frida without Root 
+Inject frida gadget into the application instead of bypassing Frida detection. </br>
 
 
