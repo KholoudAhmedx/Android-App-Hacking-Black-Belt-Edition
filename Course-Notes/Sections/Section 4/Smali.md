@@ -63,3 +63,9 @@ To patch code in smali:
 
 >[!Note]
 >When patching a large snippet of code, you can write it in java first, build the APK, then reverse engineer it and take that samli part insert it into you app. (This is an easy method to patch large code in smali without making too much mistakes) </br>
+
+## Debugging Android Applications
+If an application is not set to `debuggable=true` we can patch it to interact with the app if it is debuggable. </br>
+
+**Debugging on Steriods**
+The other method to debug Android apps is by loading smali files on `Android Studio` and install a plugin called `smalidea` to be able to attact break points and get values from memory directly. </br>
