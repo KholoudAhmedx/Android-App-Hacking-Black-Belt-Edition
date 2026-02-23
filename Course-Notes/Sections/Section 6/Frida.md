@@ -171,5 +171,9 @@ This works for Integers but not strings. The strings should be UTF. </br>
 Inject frida gadget into the application instead of bypassing Frida detection. </br>
 You interact with Frida without Root privileges. </br>
 
+Connect to Frida gadget via running `frida -U Gadget` </br>
+>[!Note]
+>Make sure you add the `INTERNET PERMISSION` as it required by Frida to communicate with the Gadget. </br>
+
 
 
