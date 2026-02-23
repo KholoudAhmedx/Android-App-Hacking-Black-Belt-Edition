@@ -177,6 +177,6 @@ Connect to Frida gadget via running `frida -U Gadget` </br>
 >Place frida-gadget.so file in the `lib` directory.
 >Load the frida gadget before the launch of the app (in Launcher activity). </br>
 
-
+`frida-inject` -> is used to run frida standalone, where you don't need a laptop to run it. </br>
 
 
