@@ -173,7 +173,10 @@ You interact with Frida without Root privileges. </br>
 
 Connect to Frida gadget via running `frida -U Gadget` </br>
 >[!Note]
->Make sure you add the `INTERNET PERMISSION` as it required by Frida to communicate with the Gadget. </br>
+>Make sure you add the `INTERNET PERMISSION` as it required by Frida to communicate with the Gadget.
+>Place frida-gadget.so file in the `lib` directory.
+>Load the frida gadget before the launch of the app (in Launcher activity). </br>
+
 
 
 
